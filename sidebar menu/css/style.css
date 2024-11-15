@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(/img/pexels-eberhardgross-1367192.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+.side-page {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.75rem 0;
+    position: relative;
+}
+.side-page li {
+    list-style: none;
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    margin: 0 1rem;
+}
+.side-page li:hover {
+    background: #fff;
+    border-radius: 0.25rem;
+}
+.side-page li:hover a {
+    color: #48482d;
+    transition: all 0ms ease-in-out;
+}
+.side-page a {
+    text-decoration: none;
+    color: #fff;
+    margin: 1rem 0;
+}
+li a:nth-child(2n) {
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 150ms ease-in-out;
+}
+.side-page i {
+    font-size: 1.25rem;
+    margin: 1;
+}
+.side-page ul {
+    width: 5rem;
+    transition: all 250ms ease-in-out;
+}
+.side-page .storm-li {
+    position: relative;
+}
+.side-page .notif-storm {
+    width: 1rem;
+    height: 1rem;
+    color: #ffd02c;
+    border: #ffd02c 0.02rem solid;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.15rem;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.01rem;
+}
+.side-page li:hover .notif-storm {
+    background: #ffd02c;
+    color: #48482d;
+}
+.side-page .light-li {
+    position: relative;
+}
+.side-page .notif-light {
+    width: 1rem;
+    height: 1rem;
+    color: #e67e22;
+    border: #e67e22 0.02rem solid;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.15rem;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.01rem;
+}
+.side-page li:hover .notif-light {
+    background: #e67e22;
+    color: #48482d;
+} 
+.label-hide-button::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background-color: #a9a9b3;
+    border-radius: 0.2rem;
+    position: absolute;
+    right: -0.5rem;
+}
+.label-hide-button::after {
+    content: '';
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-top: 0.1rem #48482d solid;
+    border-right: 0.1rem #48482d solid;
+    position: absolute;
+    right: -0.2rem;
+    top: 1rem;
+    transform: rotate(45deg);
+}
+#hide-button:checked + label + ul {
+    width: 12rem;
+}
+#hide-button:checked + label + ul li a:nth-child(2n) {
+    opacity: 100%;
+    transform: scale(1);
+}
+#hide-button:checked + label + ul li a:nth-child(1n) i {
+    margin-right: 0.75rem;
+}
+#hide-button:checked + .label-hide-button::after {
+    transform: rotate(225deg);
+    right: -0.3rem;
+    transition: all 250ms ease-in-out;
+}
